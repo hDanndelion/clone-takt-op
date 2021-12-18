@@ -1,0 +1,88 @@
+:root {
+    --black-color: #000;
+    --base-color: #b60200;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Noto Sans JP, Helvetica Neue, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, Meiryo, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+.wrapper {
+    background: url(../img/bg_pattern_white.jpg) repeat #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+/* line */
+.navLine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.text {
+    transform: rotate(-90deg);
+    font-family: Barlow Condensed,sans-serif;
+    font-size: .7291666667vw;
+    color: #787878;
+    letter-spacing: .12em;
+    font-weight: 600;
+}
+
+.line {
+    width: 1px;
+    height: 100%;
+    margin: 15px auto 0;
+    display: block;
+    background: #787878;
+    position: relative;
+}
+
+.line::after {
+    content: "";
+    bottom: 0;
+    width: 7px;
+    height: 1px;
+    margin: 0 auto;
+    display: block;
+    background: #787878;
+    position: absolute;
+    left: -3px;
+}
+
+.line::before {
+    content: "";
+    top: 0;
+    width: 7px;
+    height: 1px;
+    margin: 0 auto;
+    display: block;
+    background: #787878;
+    position: absolute;
+    left: -3px;
+}
