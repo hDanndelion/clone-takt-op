@@ -1,0 +1,228 @@
+.header {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* sideBar */
+.sideBar {
+    width: 29.1666666667vw;
+    background-color: #EFEFEF;
+    padding-top: 3.6458333333vw;
+}
+
+.logo {
+    margin-left: 1.8229166667vw;
+    width: 27.6041666667vw
+}
+
+.onairImage {
+    width: 31.25vw;
+    margin-top: 3.125vw;
+    position: relative;
+    z-index: 1;
+}
+
+.nav, .visual, .pickUp {
+    display: flex;
+    margin: 3.125vw 0 0 4.1666666667vw;
+}
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav ul li {
+    width: 50%;
+    margin-bottom: 2.0833333333vw;
+    cursor: pointer;
+}
+
+.nav ul li a {
+    font-family: Barlow Condensed,sans-serif;
+    font-weight: 600;
+    font-size: 1.1458333333vw;
+    color: #000;
+    letter-spacing: .12em;
+    transition: color .3s;
+}
+
+.nav ul li a::after {
+    content: ":";
+    font-size: 2rem;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+
+
+.nav ul li:hover a,
+.nav ul li:hover a::after {
+    color: var(--base-color);
+    opacity: 1;
+}
+
+.nav ul li a.active,
+.nav ul li a.active::after {
+    color: var(--base-color);
+    opacity: 1;
+}
+
+.visual ul {
+    display: flex;
+    padding-left: 1.3541666667vw;
+}
+
+.visual ul li {
+    position: relative;
+    width: 9.2708333333vw;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.visual ul li::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(182,2,0,.3);
+    opacity: 0;
+    box-shadow: 0 0 0 0.1041666667vw var(--base-color) inset;
+    transition: opacity 0.3s;
+}
+
+.visual ul li.active::after {
+    opacity: 1;
+}
+
+.visual ul li:hover::after {
+    opacity: 1;
+}
+
+.visual ul li img {
+    object-fit: cover;
+}
+
+/* PICKUP */
+.pickUpWrap {
+    margin-left: 1.3541666667vw;
+}
+
+.pickUpListWrap {
+    width: 18.75vw;
+    overflow: hidden;
+}
+
+.pickUpList {
+    transition-duration: 800ms;
+    display: flex;
+    padding: 0;
+}
+
+.pickUpItem {
+    width: 18.75vw;
+    flex-shrink: 0;
+}
+/* Pagination */
+.pagiWrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.7708333333vw;
+}
+
+.pickUpPagination {
+    font-size: 40px;
+    color: #787878;
+    position: relative;
+    bottom: 1.1625vw;
+}
+
+.pickUpPagination span:hover {
+    color: var(--black-color);
+    cursor: pointer;
+}
+
+.pickUpPagination span.active {
+    color: var(--black-color);
+}
+
+.pickUpBtnWrap {
+    display: flex;
+}
+
+.pickUpBtn {
+    font-size: 1.5625vw;
+    cursor: pointer;
+    transition: opacity .3s;
+}
+
+.pickUpBtn:hover {
+    opacity: 0.5;
+}
+
+/* coverImage */
+.coverImageWrap {
+    width: 70.8333333333vw;
+    height: 100.2083333333vw;
+    position: relative;
+}
+
+.coverImage1 {
+    height: 100%
+}
+
+.coverImage2 {
+    height: 100%;
+    position: relative;
+    background: url(../img/cover_img2_4.jpg);
+}
+
+.coverImage2 img {
+    position: absolute;
+    object-fit: contain;
+}
+
+.coverImage2 .img1 {
+    width: 81.0416666667vw;
+    top: 2.2395833333vw;
+    left: -5.2604166667vw;
+}
+
+.coverImage2 .img2 {
+    width: 85.6770833333vw;
+    top: 1.6666666667vw;
+    left: -0.46875vw;
+}
+
+.coverImage2 .img3 {
+    width: 58.3854166667vw ;
+    top: -1.5104166667vw;
+    left: 15.3125vw;
+}
+
+.coverImage {
+    display: none;
+}
+
+.coverImage.active {
+    display: block;
+    animation: fadeIn ease-in-out 0.3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
