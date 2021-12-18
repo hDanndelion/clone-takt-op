@@ -1,0 +1,288 @@
+/* movie */
+.movie {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.movie::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.movie span {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../img/btn_play3.png) 54.1666666667% 50%/34.1666666667% no-repeat;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.movie span::before {
+    background: url(../img/btn_play1.png) 50% 50%/contain no-repeat;
+    animation: rotateForward 20s linear infinite forwards;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.movie span::after {
+    background: url(../img/btn_play2.png) 50% 50%/contain no-repeat;
+    animation: rotateBack 20s linear infinite forwards;
+    content: "";
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 12px;
+}
+
+.movie iframe {
+    position: absolute;
+    width: 100vw;
+    height: 56.25vw;
+    top: -15vw;
+}
+
+.movie:hover span {
+    width: 110px;
+    height: 110px;
+}
+/* news */
+.news {
+    padding: 132px 0 120px;
+    position: relative;
+}
+
+.news::before {
+    content: "";
+    width: calc(100% - 440px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/bg_grungy_lightgray.jpg) 50% 50%/cover repeat;
+}
+
+.newsContentWrap {
+    display: flex;
+    width: 1200px;
+    margin: auto;
+}
+
+
+.newsContent {
+    z-index: 1;
+    flex: 1;
+    position: relative;
+}
+
+.newsContent.new::before {
+    content: "";
+    position: absolute;
+    width: 249px;
+    height: 90px;
+    top: 7px;
+    right: 2px;
+    background: url(../img/bg_text_news1.png) 0 0/contain no-repeat;
+    z-index: -1;
+}
+
+.newsContent.twi::before {
+    content: "";
+    position: absolute;
+    width: 249px;
+    height: 90px;
+    top: 7px;
+    right: 2px;
+    background: url(../img/bg_text_twitter.png) 0 0/contain no-repeat;
+    z-index: -1;
+}
+
+.newsContent.twi {
+    margin-left: 20px;
+}
+
+.newsContent h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--base-color);
+    letter-spacing: .05em;
+}
+
+.newsEvent {
+    height: 339px;
+}
+
+.newsEvent.twi {
+    background: #fff;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.newsEvent.twi::-webkit-scrollbar {
+    display: none;
+}
+
+.newsEvent ul {
+    padding: 0;
+}
+
+.newsEvent li {
+    border-left: 4px solid var(--base-color);
+    margin-bottom: 4px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.newsEvent a {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    height: 110px;
+}
+
+.newsDate {
+    width: 95px;
+    flex-shrink: 0;
+}
+
+.newsDate .y {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--base-color);
+    opacity: 0.7;
+    position: relative;
+}
+
+.newsDate .y::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 1px;
+    margin-left: 8px;
+    background: var(--base-color);
+    opacity: 0.8;
+    top: 7px;
+}
+
+.newsDate .md {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 3rem;
+    letter-spacing: .05em;
+    color: var(--base-color);
+}
+
+.newsDateText {
+    font-size: 1.6rem;
+    line-height: 1.75;
+    letter-spacing: .05em;
+    transition: color .3s;
+    color: var(--black-color);
+}
+
+.newsEvent li:hover a .newsDateText {
+    color: var(--base-color);
+}
+
+.newsMore {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.newsMoreLink {
+    color: var(--black-color);
+    width: 160px;
+    padding-bottom: 7px;
+    font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    transition: color .3s,border-color .3s;
+}
+
+.newsMoreLink:hover {
+    color: var(--base-color);
+    border-color: var(--base-color);
+}
+
+.newsMoreLink:hover svg {
+    stroke: var(--base-color);
+}
+
+.newsMoreLink svg {
+    width: 8px;
+    height: 12px;
+    fill: none;
+    stroke: #000;
+    stroke-width: 2;
+    transition: stroke .3s;
+}
+
+/* VidLayout */
+.vidLayout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100vh;
+    z-index: 99999999;
+}
+
+.vidLayoutContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.vidLayoutContent iframe {
+    width: 900px;
+    height: 506px;
+}
+
+.vidLayout span {
+    position: absolute;
+    width: 56px;
+    height: 84px;
+    transition: opacity .2s;
+    background: url(../img/btn_modal_close.png) left top/100% auto no-repeat;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.vidLayout span:hover {
+    opacity: 0.7;
+}
+
+@keyframes rotateBack {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes rotateForward {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
