@@ -1,0 +1,137 @@
+.introduction {
+    padding: 138px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* background */
+.introBg span {
+    position: absolute;
+}
+
+.rubble1 {
+    width: 325px;
+    height: 584px;
+    top: -160px;
+    left: 0;
+    background: url(../img/img_rubble1.png);
+}
+
+.rubble2 {
+    width: 524px;
+    height: 465px;
+    bottom: -35px;
+    left: 0;
+    background: url(../img/img_rubble2.png);
+}
+
+.rubble3 {
+    width: 268px;
+    height: 569px;
+    bottom: -170px;
+    right: 0;
+    background: url(../img/img_rubble3.png);
+}
+
+.rubble4 {
+    width: 370px;
+    height: 462px;
+    top: 625px;
+    left: calc(50% - 370px/2 - 181px - 371px);
+    background: url(../img/img_rubble4.jpg);
+}
+
+.rubble5 {
+    width: 692px;
+    height: 490px;
+    top: -90px;
+    left: calc(50% - 692px/2 + 614px);
+    background: url(../img/img_rubble5.jpg) 0 0/contain repeat-y;
+}
+
+.rubble6 {
+    width: 1188px;
+    height: 921px;
+    top: 210px;
+    left: calc(50% - 1188px/2 - 56px);
+    background: url(../img/img_rubble6.png) 0 0/contain repeat-y;
+}
+
+.rubble7 {
+    width: 1571px;
+    height: 1280px;
+    top: 160px;
+    left: calc(50% - 1571px/2 - 63px);
+    background: url(../img/img_rubble7.png) 0 0/contain repeat-y;
+}
+
+.rubble8 {
+    width: 1571px;
+    height: 1337px;
+    top: 140px;
+    left: calc(50% - 1571px/2 - 27px);
+    background: url(../img/img_rubble8.png) 0 0/contain repeat-y;
+}
+
+/* content */
+.introContent h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--base-color);
+    letter-spacing: .05em;
+    text-align: center;
+}
+
+.introImg {
+    width: 989px;
+    margin: 0 auto;
+    transform: translateX(126px);
+    margin-top: 70px;
+}
+
+.introImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.introText {
+    margin-top: 37px;
+    position: relative;
+    z-index: 1;
+}
+
+.introText p {
+    font-family: Noto Serif JP,serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: var(--black-color);
+    line-height: 2.3333333333;
+    text-align: center;
+    letter-spacing: .06em;
+    margin-top: 2.3333333333em;
+}
+
+.introTextHighlight {
+    color: #fff;
+    padding: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.introTextHighlight::after {
+    background-color: #000;
+    content: "";
+    width: 100%;
+    height: 80%;
+    margin: auto 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: width .5s;
+    z-index: -1;
+}
+
+.introTextHighlight.red::after {
+    background-color: var(--base-color);
+}
