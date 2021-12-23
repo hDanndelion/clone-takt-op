@@ -11,7 +11,15 @@ function handleIntroduc() {
         let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
         introTextHighlights.map(introTextHighlight => {
-            let point = introTextHighlight.offsetTop + 1999;
+            if (window.innerWidth >= 1900) {
+                var wdWidth = 2580;
+            } else if (window.innerWidth >= 1500) {
+                var wdWidth = 2330;
+            } else {
+                var wdWidth = 2130;
+            }
+            
+            let point = introTextHighlight.offsetTop + wdWidth;
             
             if (scrollTop < point) {
                 if (introTextHighlight.classList.length == 2) {
