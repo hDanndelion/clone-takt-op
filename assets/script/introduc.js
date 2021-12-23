@@ -15,14 +15,21 @@ function handleIntroduc() {
                 var wdWidth = 2580;
             } else if (window.innerWidth >= 1500) {
                 var wdWidth = 2330;
+            } else if (window.innerWidth >= 1200) {
+                var wdWidth = 1870;
+            } else if (window.innerWidth >= 1024) {
+                var wdWidth = 1730;
+            } else if (window.innerWidth >= 768){
+                var wdWidth = 3800;
             } else {
-                var wdWidth = 2130;
+                var wdWidth = 4500;
+
             }
             
             let point = introTextHighlight.offsetTop + wdWidth;
             
             if (scrollTop < point) {
-                if (introTextHighlight.classList.length == 2) {
+                if (introTextHighlight.classList.length >= 2) {
                     introTextHighlight.classList.remove('came');
                 }
 

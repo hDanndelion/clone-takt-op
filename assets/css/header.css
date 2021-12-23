@@ -28,6 +28,10 @@ img {
     z-index: 1;
 }
 
+.onairImage img + img {
+    display: none;
+}
+
 .nav, .visual, .pickUp {
     display: flex;
     margin: 3.125vw 0 0 4.1666666667vw;
