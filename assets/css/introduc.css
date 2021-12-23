@@ -121,7 +121,7 @@
 .introTextHighlight::after {
     background-color: #000;
     content: "";
-    width: 100%;
+    width: 0;
     height: 80%;
     margin: auto 0;
     position: absolute;
@@ -130,6 +130,10 @@
     transform: translateY(-50%);
     transition: width .5s;
     z-index: -1;
+}
+
+.introTextHighlight.came::after {
+    width: 100%;
 }
 
 .introTextHighlight.red::after {
