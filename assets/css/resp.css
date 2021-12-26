@@ -152,7 +152,7 @@
     }
 
     .newsEvent li {
-        border-left: 0.6510416667vw solid #b60200;
+        border-left: 0.6510416667vw solid var(--base-color);
     }
 
     .newsEvent a {
@@ -176,7 +176,7 @@
 
     .newsEvent.twi {
         height: 55.9895833333vw;
-        border-left: 0.6510416667vw solid #b60200;
+        border-left: 0.6510416667vw solid var(--base-color);
     }
 
     .newsContent.twi {
@@ -362,13 +362,13 @@
         height: 100%;
         left: -90%;
         opacity: 0;
-        transition: opacity 1s,left 1s;
+        transition: opacity 1s, left 1s;
     }
 
     .sideBarMbLayout.open {
         left: 0;
         opacity: 1;
-        transition: all .5s cubic-bezier(.25,1,.5,1);
+        transition: all .5s cubic-bezier(.25, 1, .5, 1);
     }
 
     .sideBarMbBtn {
@@ -416,5 +416,71 @@
     .sideBarMbSymb.open::before {
         transform: rotate(-180deg);
         opacity: 0;
-    }   
+    }
+}
+
+@media (max-width: 540px) {
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .line {
+        margin: 15px auto 0;
+    }
+
+    .pickUpItem {
+        width: 252px;
+    }
+
+    .pickUpPagination {
+        font-size: 50px;
+    }
+
+    .newsContent h2 {
+        font-size: 2rem;
+    }
+
+    .newsDateText {
+        font-size: 1.4rem;
+    }
+
+    .newsDate .y {
+        font-size: 1rem;
+    }
+
+    .newsDate .y::after {
+        width: 15px;
+    }
+
+    .newsDate .md {
+        font-size: 1.6rem;
+    }
+
+    .newsMoreLink {
+        font-size: 1.3rem;
+    }
+
+    .introContent h2 {
+        font-size: 2rem;
+    }
+
+    .introText p {
+        font-size: 1.2rem;
+    }
+
+    .footerTopUp .nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    .footerLinkLeft ul li a {
+        font-size: 1rem;
+    }
+
+    .footerLinkRight div p {
+        font-size: 1.2rem;
+    }
+
+    .footerBottom div p {
+        font-size: 1rem;
+    }
 }
