@@ -34,7 +34,7 @@ function renderList(newsLists) {
         return (
                 <li>
                     <a href="">
-                        <div className="newsDate"><span className="y">{newsList.year}</span><span className="md">{newsList.dayandmonth}</span></div>
+                        <div className="newsDate"><span className="y">{newsList.year}</span><span className="md">{newsList.daynmonth}</span></div>
     
                         <div className="newsDateText">
                             <p>{newsList.text}</p>
