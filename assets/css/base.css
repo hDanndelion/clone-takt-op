@@ -33,10 +33,6 @@ p, ul {
     background: url(../img/bg_pattern_white.jpg) repeat #fff;
 }
 
-.sideBarMbBtn {
-    display: none;
-}
-
 .hidden {
     display: none;
 }
